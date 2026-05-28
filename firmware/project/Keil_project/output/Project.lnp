@@ -3,6 +3,7 @@
 ".\output\main.o"
 ".\output\systick.o"
 ".\output\gd32e230c_eval.o"
+".\output\bsp_led.o"
 ".\output\system_gd32e23x.o"
 ".\output\gd32e23x_rcu.o"
 ".\output\gd32e23x_gpio.o"

@@ -404,6 +404,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\user\gd32e230c_eval.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\bsp_led.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
