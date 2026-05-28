@@ -1,17 +1,15 @@
 #include "gd32e23x.h"
-#include "systick.h"
-#include "bsp_led.h"
 
 int main(void)
 {
-    systick_config();
+    rcu_periph_clock_enable(RCU_GPIOA);
 
-    bsp_led_init();
+    gpio_mode_set(GPIOA, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_6 | GPIO_PIN_7);
+    gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_6 | GPIO_PIN_7);
+
+    gpio_bit_set(GPIOA, GPIO_PIN_6 | GPIO_PIN_7);
 
     while(1)
     {
-        bsp_led1_toggle();
-
-        delay_1ms(500);
     }
 }

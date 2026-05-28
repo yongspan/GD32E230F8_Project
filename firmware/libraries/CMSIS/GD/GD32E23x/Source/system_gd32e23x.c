@@ -46,8 +46,8 @@
 /* select a system clock by uncommenting the following line */
 //#define __SYSTEM_CLOCK_8M_HXTAL              (__HXTAL)
 //#define __SYSTEM_CLOCK_8M_IRC8M              (__IRC8M)
-#define __SYSTEM_CLOCK_72M_PLL_HXTAL         (uint32_t)(72000000)
-//#define __SYSTEM_CLOCK_72M_PLL_IRC8M_DIV2    (uint32_t)(72000000)
+//#define __SYSTEM_CLOCK_72M_PLL_HXTAL         (uint32_t)(72000000)
+#define __SYSTEM_CLOCK_72M_PLL_IRC8M_DIV2    (uint32_t)(72000000)
 
 /* The following is to prevent Vcore fluctuations caused by frequency switching.
    It is strongly recommended to include it to avoid issues caused by self-removal.

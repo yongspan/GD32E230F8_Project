@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\output\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu May 28 19:00:36 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu May 28 20:13:22 2026
 <BR><P>
-<H3>Maximum Stack Usage =         72 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         68 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; bsp_led_init &rArr; gpio_output_options_set
+SystemInit &rArr; system_clock_config &rArr; system_clock_72m_irc8m
 <P>
 <H3>
 Mutually Recursive functions
@@ -62,7 +62,7 @@ Global Symbols
 <P><STRONG><a name="[24]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32e23x.o(.text)
 </UL>
-<P><STRONG><a name="[39]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[32]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[25]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -72,15 +72,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[3a]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[33]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[3b]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[34]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[3c]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[35]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[3d]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[36]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[3e]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[37]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, startup_gd32e23x.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32e23x.o(RESET)
@@ -179,7 +179,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[3f]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[38]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32e23x_it.o(.text.HardFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32e23x.o(RESET)
@@ -200,92 +200,61 @@ Global Symbols
 <P><STRONG><a name="[5]"></a>SysTick_Handler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, gd32e23x_it.o(.text.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysTick_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_decrement
+<BR>[Calls]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_decrement
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32e23x.o(RESET)
 </UL>
 <P><STRONG><a name="[23]"></a>SystemInit</STRONG> (Thumb, 272 bytes, Stack size 32 bytes, system_gd32e23x.o(.text.SystemInit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = SystemInit &rArr; system_clock_config &rArr; system_clock_72m_hxtal
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = SystemInit &rArr; system_clock_config &rArr; system_clock_72m_irc8m
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_vector_table_set
-<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
-<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_soft_delay_
+<BR>[Calls]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_vector_table_set
+<LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
+<LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_soft_delay_
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32e23x.o(.text)
 </UL>
-<P><STRONG><a name="[2f]"></a>bsp_led1_toggle</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, bsp_led.o(.text.bsp_led1_toggle))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = bsp_led1_toggle &rArr; gpio_bit_toggle
-</UL>
-<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_toggle
-</UL>
-<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[31]"></a>bsp_led_init</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, bsp_led.o(.text.bsp_led_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = bsp_led_init &rArr; gpio_output_options_set
-</UL>
-<BR>[Calls]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_reset
-<LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_output_options_set
-<LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode_set
-<LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
-</UL>
-<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[37]"></a>delay_1ms</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, systick.o(.text.delay_1ms))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = delay_1ms
-</UL>
-<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[2b]"></a>delay_decrement</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, systick.o(.text.delay_decrement))
+<P><STRONG><a name="[29]"></a>delay_decrement</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, systick.o(.text.delay_decrement))
 <BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[35]"></a>gpio_bit_reset</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, gd32e23x_gpio.o(.text.gpio_bit_reset))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gpio_bit_reset
+<P><STRONG><a name="[30]"></a>gpio_bit_set</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, gd32e23x_gpio.o(.text.gpio_bit_set))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gpio_bit_set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
-</UL>
-
-<P><STRONG><a name="[30]"></a>gpio_bit_toggle</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, gd32e23x_gpio.o(.text.gpio_bit_toggle))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gpio_bit_toggle
-</UL>
-<BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led1_toggle
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[33]"></a>gpio_mode_set</STRONG> (Thumb, 142 bytes, Stack size 28 bytes, gd32e23x_gpio.o(.text.gpio_mode_set))
+<P><STRONG><a name="[2e]"></a>gpio_mode_set</STRONG> (Thumb, 142 bytes, Stack size 28 bytes, gd32e23x_gpio.o(.text.gpio_mode_set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = gpio_mode_set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[34]"></a>gpio_output_options_set</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, gd32e23x_gpio.o(.text.gpio_output_options_set))
+<P><STRONG><a name="[2f]"></a>gpio_output_options_set</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, gd32e23x_gpio.o(.text.gpio_output_options_set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gpio_output_options_set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[22]"></a>main</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = main &rArr; bsp_led_init &rArr; gpio_output_options_set
+<P><STRONG><a name="[22]"></a>main</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = main &rArr; gpio_output_options_set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_1ms
-<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led1_toggle
-<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
-<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_config
+<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_set
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_output_options_set
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode_set
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[2e]"></a>nvic_vector_table_set</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, gd32e23x_misc.o(.text.nvic_vector_table_set))
+<P><STRONG><a name="[2c]"></a>nvic_vector_table_set</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, gd32e23x_misc.o(.text.nvic_vector_table_set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = nvic_vector_table_set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[32]"></a>rcu_periph_clock_enable</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, gd32e23x_rcu.o(.text.rcu_periph_clock_enable))
+<P><STRONG><a name="[2d]"></a>rcu_periph_clock_enable</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, gd32e23x_rcu.o(.text.rcu_periph_clock_enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = rcu_periph_clock_enable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[28]"></a>syscfg_flag_get</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, gd32e23x_syscfg.o(.text.syscfg_flag_get))
@@ -294,57 +263,33 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
 </UL>
 
-<P><STRONG><a name="[36]"></a>systick_config</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, systick.o(.text.systick_config))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = systick_config &rArr; SysTick_Config &rArr; __NVIC_SetPriority
-</UL>
-<BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
-<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
-</UL>
-<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
+<P><STRONG><a name="[39]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[40]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[3a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[41]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
-
-<P><STRONG><a name="[42]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[3b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[29]"></a>SysTick_Config</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, systick.o(.text.SysTick_Config))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SysTick_Config &rArr; __NVIC_SetPriority
-</UL>
-<BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
-</UL>
-<BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_config
-</UL>
-
-<P><STRONG><a name="[2a]"></a>__NVIC_SetPriority</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, systick.o(.text.__NVIC_SetPriority))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __NVIC_SetPriority
-</UL>
-<BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
-<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_config
-</UL>
-
-<P><STRONG><a name="[2c]"></a>_soft_delay_</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, system_gd32e23x.o(.text._soft_delay_))
+<P><STRONG><a name="[2a]"></a>_soft_delay_</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, system_gd32e23x.o(.text._soft_delay_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _soft_delay_
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[2d]"></a>system_clock_config</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_gd32e23x.o(.text.system_clock_config))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = system_clock_config &rArr; system_clock_72m_hxtal
+<P><STRONG><a name="[2b]"></a>system_clock_config</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_gd32e23x.o(.text.system_clock_config))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = system_clock_config &rArr; system_clock_72m_irc8m
 </UL>
-<BR>[Calls]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_72m_hxtal
+<BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_72m_irc8m
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[38]"></a>system_clock_72m_hxtal</STRONG> (Thumb, 320 bytes, Stack size 28 bytes, system_gd32e23x.o(.text.system_clock_72m_hxtal))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = system_clock_72m_hxtal
+<P><STRONG><a name="[31]"></a>system_clock_72m_irc8m</STRONG> (Thumb, 316 bytes, Stack size 28 bytes, system_gd32e23x.o(.text.system_clock_72m_irc8m))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = system_clock_72m_irc8m
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
+<BR>[Called By]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 <P>
 <H3>
