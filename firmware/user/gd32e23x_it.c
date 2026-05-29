@@ -35,7 +35,7 @@ OF SUCH DAMAGE.
 #include "gd32e23x_it.h"
 #include "main.h"
 #include "systick.h"
-
+#include "delay.h"
 #define SRAM_PARITY_CHECK_ERROR_HANDLE(s)    do{}while(1)
 
 /*!
@@ -103,6 +103,5 @@ void PendSV_Handler(void)
 */
 void SysTick_Handler(void)
 {
-    //led_spark();
     delay_decrement();
 }

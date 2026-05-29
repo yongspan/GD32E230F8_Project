@@ -23,3 +23,9 @@ void bsp_led1_off(void)
 {
     gpio_bit_reset(LED1_GPIO_PORT, LED1_GPIO_PIN);
 }
+void bsp_led_toggle(void)
+{
+    gpio_bit_write(GPIOA,
+                   GPIO_PIN_7,
+                   (bit_status)!gpio_input_bit_get(GPIOA, GPIO_PIN_7));
+}

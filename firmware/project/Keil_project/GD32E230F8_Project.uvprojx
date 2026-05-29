@@ -394,21 +394,6 @@
               <FileType>1</FileType>
               <FilePath>..\..\user\main.c</FilePath>
             </File>
-            <File>
-              <FileName>systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\user\systick.c</FilePath>
-            </File>
-            <File>
-              <FileName>gd32e230c_eval.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\user\gd32e230c_eval.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\bsp\bsp_led.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -473,6 +458,21 @@
           <GroupName>Doc</GroupName>
         </Group>
         <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\bsp_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\delay.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
@@ -491,5 +491,14 @@
     </components>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>GD32E230F8_Project</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
