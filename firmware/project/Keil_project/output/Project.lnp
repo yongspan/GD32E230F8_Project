@@ -13,6 +13,7 @@
 ".\output\delay.o"
 ".\output\bsp_uart.o"
 ".\output\bsp_uart_ringbuffer.o"
+".\output\cmd_parser.o"
 --library_type=microlib --strict --scatter ".\output\Project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

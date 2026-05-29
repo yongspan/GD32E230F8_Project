@@ -4,6 +4,7 @@
 #include "bsp_uart.h"
 #include <stdio.h>
 #include "bsp_uart_ringbuffer.h"
+#include "cmd_parser.h"
 
 int main(void)
 {
@@ -15,17 +16,12 @@ int main(void)
 
     printf("GD32 UART RX Polling Test\r\n");
 
-   while(1)
+  while(1)
 {
-    uint8_t ch;
-
     while(uart_ringbuffer_pop(&ch))
     {
-        printf("RB RX:%c\r\n", ch);
+        cmd_parser_process_char(ch);
     }
-
-    bsp_led_toggle();
-    delay_ms(500);
 }
 
 }
