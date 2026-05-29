@@ -81,3 +81,44 @@ SysTick 延时模块。
 中断入口统一放在 gd32e23x_it.c。
 
 硬件驱动统一放入 BSP。
+Current Verified Functions
+
+- System clock (IRC8M)
+- GPIO output
+- LED driver
+- SysTick interrupt
+- Delay module
+- LED blink (500ms)
+
+## Current Verified Functions
+
+### System
+
+* Internal IRC8M clock
+* SystemCoreClock configured correctly
+* SysTick 1ms interrupt
+
+### GPIO
+
+* PA7 LED output
+* LED active high
+
+### Delay
+
+* delay_ms()
+* SysTick based software delay
+
+### UART
+
+* USART0
+* PA9 TX
+* PA10 RX
+* 115200 baudrate
+* printf redirect
+* UART TX verified through DAPLink VCP
+
+### Debug
+
+* LED debug
+* UART log debug
+* Git version control
