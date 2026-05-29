@@ -6,16 +6,22 @@
 
 int main(void)
 {
+    uint8_t ch;
+
     bsp_led_init();
     delay_init();
     bsp_uart_init();
 
-    printf("GD32 UART OK\r\n");
+    printf("GD32 UART RX Polling Test\r\n");
 
     while(1)
     {
+        if(bsp_uart_get_char(&ch))
+        {
+            printf("RX:%c\r\n", ch);
+        }
+
         bsp_led_toggle();
-        printf("LED toggle\r\n");
         delay_ms(500);
     }
 }

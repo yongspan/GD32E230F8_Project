@@ -47,6 +47,17 @@ void bsp_uart_send_string(const char *str)
     }
 }
 
+uint8_t bsp_uart_get_char(uint8_t *ch)
+{
+    if(RESET != usart_flag_get(USART0, USART_FLAG_RBNE))
+    {
+        *ch = (uint8_t)usart_data_receive(USART0);
+        return 1;
+    }
+
+    return 0;
+}
+
 int fputc(int ch, FILE *f)
 {
     bsp_uart_send_char((uint8_t)ch);
