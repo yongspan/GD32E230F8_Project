@@ -71,3 +71,36 @@ LED 无法闪烁。
 建立 delay.c / delay.h。
 
 使用 SysTick 实现 1ms Tick。
+
+## Bug-005
+
+### Problem
+
+UART initialized successfully but PA9 LED remains ON.
+
+### Cause
+
+PA9 is configured as USART0_TX.
+
+UART idle state stays HIGH.
+
+LED connected to PA9 therefore appears constantly ON.
+
+### Solution
+
+Normal behavior.
+
+Use serial terminal to verify UART output instead of LED state.
+
+Bug-006
+
+现象：
+PA9 LED常亮
+
+原因：
+PA9复用为USART0_TX
+
+UART空闲状态为高电平
+
+结论：
+正常现象

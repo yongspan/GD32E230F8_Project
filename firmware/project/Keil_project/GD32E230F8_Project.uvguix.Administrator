@@ -3624,18 +3624,18 @@
       </Doc>
       <Doc>
         <Name>..\..\user\main.c</Name>
-        <ColumnNumber>5</ColumnNumber>
+        <ColumnNumber>0</ColumnNumber>
         <TopLine>1</TopLine>
-        <CurrentLine>26</CurrentLine>
+        <CurrentLine>32</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
         <Name>..\..\user\gd32e23x_it.c</Name>
-        <ColumnNumber>1</ColumnNumber>
-        <TopLine>64</TopLine>
-        <CurrentLine>105</CurrentLine>
+        <ColumnNumber>25</ColumnNumber>
+        <TopLine>73</TopLine>
+        <CurrentLine>115</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -3705,9 +3705,9 @@
       </Doc>
       <Doc>
         <Name>..\..\bsp\bsp_uart.c</Name>
-        <ColumnNumber>1</ColumnNumber>
-        <TopLine>21</TopLine>
-        <CurrentLine>51</CurrentLine>
+        <ColumnNumber>37</ColumnNumber>
+        <TopLine>1</TopLine>
+        <CurrentLine>34</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -3723,9 +3723,9 @@
       </Doc>
       <Doc>
         <Name>..\..\bsp\bsp_uart.h</Name>
-        <ColumnNumber>43</ColumnNumber>
+        <ColumnNumber>37</ColumnNumber>
         <TopLine>1</TopLine>
-        <CurrentLine>9</CurrentLine>
+        <CurrentLine>12</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>

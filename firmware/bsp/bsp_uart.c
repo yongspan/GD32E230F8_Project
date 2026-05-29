@@ -1,5 +1,8 @@
 #include "bsp_uart.h"
 
+volatile uint8_t uart_rx_flag = 0;
+volatile uint8_t uart_rx_data = 0;
+
 void bsp_uart_init(void)
 {
     rcu_periph_clock_enable(RCU_GPIOA);
@@ -27,6 +30,9 @@ void bsp_uart_init(void)
     usart_transmit_config(USART0, USART_TRANSMIT_ENABLE);
 
     usart_enable(USART0);
+		
+		nvic_irq_enable(USART0_IRQn, 2U);
+    usart_interrupt_enable(USART0, USART_INT_RBNE);
 }
 
 void bsp_uart_send_char(uint8_t ch)

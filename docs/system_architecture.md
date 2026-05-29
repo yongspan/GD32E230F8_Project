@@ -122,3 +122,10 @@ Current Verified Functions
 * LED debug
 * UART log debug
 * Git version control
+
+UART
+
+√ USART0 TX
+√ USART0 RX
+√ printf redirect
+√ Polling receive

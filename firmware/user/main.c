@@ -14,14 +14,20 @@ int main(void)
 
     printf("GD32 UART RX Polling Test\r\n");
 
-    while(1)
+   while(1)
+{
+    if(uart_rx_flag)
     {
-        if(bsp_uart_get_char(&ch))
-        {
-            printf("RX:%c\r\n", ch);
-        }
+        uint8_t ch;
 
-        bsp_led_toggle();
-        delay_ms(500);
+        uart_rx_flag = 0;
+        ch = uart_rx_data;
+
+        printf("IRQ RX:%c\r\n", ch);
     }
+
+    bsp_led_toggle();
+    delay_ms(500);
+}
+
 }
