@@ -38,6 +38,7 @@ OF SUCH DAMAGE.
 #include "delay.h"
 #include "bsp_uart.h"
 #include "bsp_uart_ringbuffer.h"
+#include "bsp_key.h"
 
 #define SRAM_PARITY_CHECK_ERROR_HANDLE(s)    do{}while(1)
 
@@ -118,4 +119,9 @@ void USART0_IRQHandler(void)
         data = (uint8_t)usart_data_receive(USART0);
         uart_ringbuffer_push(data);
     }
+}
+
+void EXTI2_3_IRQHandler(void)
+{
+    bsp_key_exti_irq_handler();
 }

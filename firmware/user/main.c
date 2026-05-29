@@ -11,11 +11,12 @@ int main(void)
 {
     uint8_t ch;
 
+	
     bsp_led_init();
     delay_init();
     bsp_uart_init();
     bsp_key_init();
-	
+	  bsp_key_exti_init();
     printf("GD32 UART RX Polling Test\r\n");
 
   while(1)
@@ -31,14 +32,27 @@ int main(void)
     delay_ms(500);
 }
 
-if(bsp_key_add_scan())
-{
-    printf("KEY ADD\r\n");
-}
+//if(bsp_key_add_scan())
+//{
+//    printf("KEY ADD\r\n");
+//}
 
-if(bsp_key_sub_scan())
+//if(bsp_key_sub_scan())
+//{
+//    printf("KEY SUB\r\n");
+//}
+
+if(bsp_key_get_irq_pending())
 {
-    printf("KEY SUB\r\n");
+    if(bsp_key_add_scan())
+    {
+        printf("KEY ADD IRQ\r\n");
+    }
+
+    if(bsp_key_sub_scan())
+    {
+        printf("KEY SUB IRQ\r\n");
+    }
 }
 
 }
