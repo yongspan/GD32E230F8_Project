@@ -16,4 +16,7 @@ void bsp_key_init(void);
 uint8_t bsp_key_add_read(void);
 uint8_t bsp_key_sub_read(void);
 
+uint8_t bsp_key_add_scan(void);
+uint8_t bsp_key_sub_scan(void);
+
 #endif

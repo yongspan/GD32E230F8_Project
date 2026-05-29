@@ -31,16 +31,14 @@ int main(void)
     delay_ms(500);
 }
 
-if(bsp_key_add_read() == KEY_PRESSED)
+if(bsp_key_add_scan())
 {
     printf("KEY ADD\r\n");
-    delay_ms(200);
 }
 
-if(bsp_key_sub_read() == KEY_PRESSED)
+if(bsp_key_sub_scan())
 {
     printf("KEY SUB\r\n");
-    delay_ms(200);
 }
 
 }
