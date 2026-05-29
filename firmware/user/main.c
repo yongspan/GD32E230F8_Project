@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include "bsp_uart_ringbuffer.h"
 #include "cmd_parser.h"
+#include "bsp_key.h"
 
 int main(void)
 {
@@ -13,7 +14,8 @@ int main(void)
     bsp_led_init();
     delay_init();
     bsp_uart_init();
-
+    bsp_key_init();
+	
     printf("GD32 UART RX Polling Test\r\n");
 
   while(1)
@@ -28,6 +30,19 @@ int main(void)
     bsp_led1_toggle();
     delay_ms(500);
 }
+
+if(bsp_key_add_read() == KEY_PRESSED)
+{
+    printf("KEY ADD\r\n");
+    delay_ms(200);
+}
+
+if(bsp_key_sub_read() == KEY_PRESSED)
+{
+    printf("KEY SUB\r\n");
+    delay_ms(200);
+}
+
 }
 
 }
