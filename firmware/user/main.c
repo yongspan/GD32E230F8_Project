@@ -3,6 +3,7 @@
 #include "delay.h"
 #include "bsp_uart.h"
 #include <stdio.h>
+#include "bsp_uart_ringbuffer.h"
 
 int main(void)
 {
@@ -16,14 +17,11 @@ int main(void)
 
    while(1)
 {
-    if(uart_rx_flag)
+    uint8_t ch;
+
+    while(uart_ringbuffer_pop(&ch))
     {
-        uint8_t ch;
-
-        uart_rx_flag = 0;
-        ch = uart_rx_data;
-
-        printf("IRQ RX:%c\r\n", ch);
+        printf("RB RX:%c\r\n", ch);
     }
 
     bsp_led_toggle();

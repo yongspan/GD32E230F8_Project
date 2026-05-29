@@ -129,3 +129,21 @@ UART
 √ USART0 RX
 √ printf redirect
 √ Polling receive
+UART
+
+√ TX
+√ RX Polling
+√ RX Interrupt
+UART Module
+
+USART0
+PA9 TX
+PA10 RX
+
+Features
+
+√ TX
+√ RX Polling
+√ RX Interrupt
+√ Ring Buffer
+√ printf Redirect

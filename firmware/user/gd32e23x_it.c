@@ -37,6 +37,8 @@ OF SUCH DAMAGE.
 #include "systick.h"
 #include "delay.h"
 #include "bsp_uart.h"
+#include "bsp_uart_ringbuffer.h"
+
 #define SRAM_PARITY_CHECK_ERROR_HANDLE(s)    do{}while(1)
 
 /*!
@@ -109,9 +111,11 @@ void SysTick_Handler(void)
 
 void USART0_IRQHandler(void)
 {
+    uint8_t data;
+
     if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_RBNE))
     {
-        uart_rx_data = (uint8_t)usart_data_receive(USART0);
-        uart_rx_flag = 1;
+        data = (uint8_t)usart_data_receive(USART0);
+        uart_ringbuffer_push(data);
     }
 }

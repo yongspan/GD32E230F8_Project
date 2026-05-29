@@ -1,10 +1,12 @@
 #include "bsp_uart.h"
+#include "bsp_uart_ringbuffer.h"
 
 volatile uint8_t uart_rx_flag = 0;
 volatile uint8_t uart_rx_data = 0;
 
 void bsp_uart_init(void)
 {
+	  uart_ringbuffer_init();
     rcu_periph_clock_enable(RCU_GPIOA);
     rcu_periph_clock_enable(RCU_USART0);
 
