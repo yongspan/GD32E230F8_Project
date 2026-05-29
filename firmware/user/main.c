@@ -7,6 +7,7 @@
 #include "cmd_parser.h"
 #include "bsp_key.h"
 #include "bsp_pwm.h"
+#include "app_brightness.h"
 
 int main(void)
 {
@@ -20,6 +21,7 @@ int main(void)
 	  bsp_key_exti_init();
 	
     bsp_pwm_init();
+	  app_brightness_init();
     bsp_pwm_set_duty(20);
 	
     printf("GD32 UART RX Polling Test\r\n");
@@ -31,15 +33,8 @@ while(1)
         cmd_parser_process_char(ch);
     }
 
-    if(bsp_key_add_scan())
-    {
-        printf("KEY ADD\r\n");
-    }
 
-    if(bsp_key_sub_scan())
-    {
-        printf("KEY SUB\r\n");
-    }
+		app_brightness_process();
 }
 
 }

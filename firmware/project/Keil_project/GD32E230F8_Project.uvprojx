@@ -505,6 +505,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\app\cmd_parser.c</FilePath>
             </File>
+            <File>
+              <FileName>app_brightness.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\app\app_brightness.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
