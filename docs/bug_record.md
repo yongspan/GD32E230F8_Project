@@ -132,3 +132,56 @@ Bug-009
 示例：
 led on;
 led off;
+
+
+Bug-010
+
+现象：
+led off 无法关闭LED
+
+原因：
+main.c中的自动闪烁逻辑同时控制LED
+
+解决：
+统一由命令系统控制LED状态
+
+# Bug 003 - Backlight PWM No Output
+
+## Symptom
+
+Backlight could not be controlled by PWM.
+
+PA1 output voltage remained 0V.
+
+## Root Cause
+
+PA1 does not support Timer PWM function on GD32E230F8V6 LGA20 package.
+
+PWM was incorrectly implemented on PA1.
+
+## Investigation
+
+1. Verified LED driver circuit.
+2. Verified PA1 GPIO output.
+3. Checked GD32E230F8V6 datasheet.
+4. Confirmed PA1 has no TIMER channel function.
+5. Re-routed PWM signal to PA6.
+
+## Solution
+
+PWM pin changed:
+
+PA1 -> PA6
+
+Timer changed:
+
+TIMER14 -> TIMER2_CH0
+
+## Result
+
+Backlight PWM works normally.
+
+Brightness can be adjusted through duty cycle.
+
+```
+```

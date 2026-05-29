@@ -6,6 +6,7 @@
 #include "bsp_uart_ringbuffer.h"
 #include "cmd_parser.h"
 #include "bsp_key.h"
+#include "bsp_pwm.h"
 
 int main(void)
 {
@@ -17,44 +18,28 @@ int main(void)
     bsp_uart_init();
     bsp_key_init();
 	  bsp_key_exti_init();
+	
+    bsp_pwm_init();
+    bsp_pwm_set_duty(20);
+	
     printf("GD32 UART RX Polling Test\r\n");
 
-  while(1)
+while(1)
 {
     while(uart_ringbuffer_pop(&ch))
     {
         cmd_parser_process_char(ch);
     }
 
-    if(cmd_parser_get_blink_enable())
-{
-    bsp_led1_toggle();
-    delay_ms(500);
-}
-
-//if(bsp_key_add_scan())
-//{
-//    printf("KEY ADD\r\n");
-//}
-
-//if(bsp_key_sub_scan())
-//{
-//    printf("KEY SUB\r\n");
-//}
-
-if(bsp_key_get_irq_pending())
-{
     if(bsp_key_add_scan())
     {
-        printf("KEY ADD IRQ\r\n");
+        printf("KEY ADD\r\n");
     }
 
     if(bsp_key_sub_scan())
     {
-        printf("KEY SUB IRQ\r\n");
+        printf("KEY SUB\r\n");
     }
-}
-
 }
 
 }

@@ -165,3 +165,72 @@ Ring Buffer
 Command Parser
 ↓
 LED Control
+UART Command Parser
+
+Command End Symbol
+
+;
+
+Supported Commands
+
+led1 on;
+led1 off;
+
+led2 on;
+led2 off;
+
+blink1;
+
+all off;
+
+status;
+
+help;
+
+# Backlight Module
+
+## Overview
+
+Backlight brightness is controlled by TPS61165 LED driver.
+
+The MCU outputs a PWM signal to the TPS61165 CTRL pin.
+
+## Hardware Resource
+
+| Item               | Resource     |
+| ------------------ | ------------ |
+| MCU                | GD32E230F8V6 |
+| Driver IC          | TPS61165     |
+| PWM GPIO           | PA6          |
+| Timer              | TIMER2_CH0   |
+| Alternate Function | GPIO_AF_1    |
+
+## PWM Configuration
+
+| Item          | Value  |
+| ------------- | ------ |
+| PWM Frequency | 10kHz  |
+| Duty Range    | 0~100% |
+
+## Software Interface
+
+```c
+void bsp_pwm_init(void);
+void bsp_pwm_set_duty(uint8_t duty);
+uint8_t bsp_pwm_get_duty(void);
+```
+
+## Notes
+
+TPS61165 brightness is controlled through PWM signal applied to CTRL pin.
+
+Recommended PWM dimming frequency:
+
+6.5kHz ~ 100kHz
+
+Current implementation:
+
+10kHz
+
+```
+```

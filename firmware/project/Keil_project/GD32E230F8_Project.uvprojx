@@ -439,6 +439,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\libraries\GD32E23x_standard_peripheral\Source\gd32e23x_usart.c</FilePath>
             </File>
+            <File>
+              <FileName>gd32e23x_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\libraries\GD32E23x_standard_peripheral\Source\gd32e23x_timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -484,6 +489,11 @@
               <FileName>bsp_key.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\bsp\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\bsp_pwm.c</FilePath>
             </File>
           </Files>
         </Group>
