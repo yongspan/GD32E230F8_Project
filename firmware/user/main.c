@@ -22,6 +22,12 @@ int main(void)
     {
         cmd_parser_process_char(ch);
     }
+
+    if(cmd_parser_get_blink_enable())
+{
+    bsp_led1_toggle();
+    delay_ms(500);
+}
 }
 
 }

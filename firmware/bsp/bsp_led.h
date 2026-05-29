@@ -19,5 +19,6 @@ void bsp_led2_on(void);
 void bsp_led2_off(void);
 void bsp_led2_toggle(void);
 
+uint8_t cmd_parser_get_blink_enable(void);
 
 #endif

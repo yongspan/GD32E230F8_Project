@@ -147,3 +147,21 @@ Features
 √ RX Interrupt
 √ Ring Buffer
 √ printf Redirect
+Command Parser
+
+Features
+
+√ led on;
+√ led off;
+
+Architecture
+
+UART RX
+↓
+Interrupt
+↓
+Ring Buffer
+↓
+Command Parser
+↓
+LED Control

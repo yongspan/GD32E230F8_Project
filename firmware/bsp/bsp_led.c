@@ -14,6 +14,8 @@ void bsp_led_init(void)
     gpio_bit_reset(GPIOA, LED1_GPIO_PIN | LED2_GPIO_PIN); // ???
 }
 
+
+
 void bsp_led1_on(void)
 {
     gpio_bit_set(LED1_GPIO_PORT, LED1_GPIO_PIN);          // ????
@@ -23,9 +25,38 @@ void bsp_led1_off(void)
 {
     gpio_bit_reset(LED1_GPIO_PORT, LED1_GPIO_PIN);
 }
+
+void bsp_led1_toggle(void)
+{
+    gpio_bit_write(
+        LED1_GPIO_PORT,
+        LED1_GPIO_PIN,
+        (bit_status)!gpio_input_bit_get(
+            LED1_GPIO_PORT,
+            LED1_GPIO_PIN));
+}
+
+void bsp_led2_on(void)
+{
+    gpio_bit_set(LED2_GPIO_PORT, LED2_GPIO_PIN);
+}
+
+void bsp_led2_off(void)
+{
+    gpio_bit_reset(LED2_GPIO_PORT, LED2_GPIO_PIN);
+}
+
+void bsp_led2_toggle(void)
+{
+    gpio_bit_write(
+        LED2_GPIO_PORT,
+        LED2_GPIO_PIN,
+        (bit_status)!gpio_input_bit_get(
+            LED2_GPIO_PORT,
+            LED2_GPIO_PIN));
+}
+
 void bsp_led_toggle(void)
 {
-    gpio_bit_write(GPIOA,
-                   GPIO_PIN_7,
-                   (bit_status)!gpio_input_bit_get(GPIOA, GPIO_PIN_7));
+    bsp_led2_toggle();
 }
