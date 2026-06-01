@@ -27,11 +27,11 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x69830
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
 I (..\..\user\main.h)(0x69830D66)
 I (..\..\user\systick.h)(0x69830D66)
-I (..\..\bsp\delay.h)(0x6A193D20)
+I (..\..\bsp\delay.h)(0x6A1D264E)
 I (..\..\bsp\bsp_uart.h)(0x6A18F8B3)
 I (..\..\bsp\bsp_uart_ringbuffer.h)(0x6A18FD59)
-I (..\..\bsp\bsp_key.h)(0x6A193FB9)
-F (..\..\user\main.c)(0x6A1D00A9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/main.o -MMD)
+I (..\..\bsp\bsp_key.h)(0x6A1D264E)
+F (..\..\user\main.c)(0x6A1D264E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/main.o -MMD)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x69645ED3)
@@ -55,18 +55,19 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
+I (..\..\bsp\delay.h)(0x6A1D264E)
 I (..\..\bsp\bsp_led.h)(0x6A190D2E)
-I (..\..\bsp\delay.h)(0x6A193D20)
 I (..\..\bsp\bsp_uart.h)(0x6A18F8B3)
 I (..\..\bsp\bsp_uart_ringbuffer.h)(0x6A18FD59)
-I (..\..\app\cmd_parser.h)(0x6A190104)
-I (..\..\bsp\bsp_key.h)(0x6A193FB9)
+I (..\..\bsp\bsp_key.h)(0x6A1D264E)
 I (..\..\bsp\bsp_pwm.h)(0x6A194F58)
-I (..\..\app\app_brightness.h)(0x6A1CD94B)
 I (..\..\bsp\bsp_adc.h)(0x6A1CE767)
-I (..\..\app\app_battery.h)(0x6A1CE9BC)
-I (..\..\bsp\bsp_charge.h)(0x6A1CF2B3)
-I (..\..\app\app_version.h)(0x6A1D000E)
+I (..\..\bsp\bsp_charge.h)(0x6A1D264E)
+I (..\..\app\cmd_parser.h)(0x6A1D264E)
+I (..\..\app\app_brightness.h)(0x6A1D264E)
+I (..\..\app\app_battery.h)(0x6A1D43CF)
+I (..\..\app\app_version.h)(0x6A1D4594)
+I (..\..\app\app_config.h)(0x6A1D43D5)
 F (..\..\libraries\CMSIS\GD\GD32E23x\Source\system_gd32e23x.c)(0x6A183550)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/system_gd32e23x.o -MMD)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
@@ -334,7 +335,7 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
 F (..\..\bsp\delay.c)(0x6A193C58)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/delay.o -MMD)
-I (..\..\bsp\delay.h)(0x6A193D20)
+I (..\..\bsp\delay.h)(0x6A1D264E)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x69645ED3)
@@ -409,8 +410,8 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
-F (..\..\bsp\bsp_key.c)(0x6A193FE8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/bsp_key.o -MMD)
-I (..\..\bsp\bsp_key.h)(0x6A193FB9)
+F (..\..\bsp\bsp_key.c)(0x6A1D2C4B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/bsp_key.o -MMD)
+I (..\..\bsp\bsp_key.h)(0x6A1D264E)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x69645ED3)
@@ -434,7 +435,7 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
-I (..\..\bsp\delay.h)(0x6A193D20)
+I (..\..\bsp\delay.h)(0x6A1D264E)
 F (..\..\bsp\bsp_pwm.c)(0x6A1CDA56)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/bsp_pwm.o -MMD)
 I (..\..\bsp\bsp_pwm.h)(0x6A194F58)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
@@ -510,9 +511,9 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
-I (..\..\bsp\delay.h)(0x6A193D20)
-F (..\..\bsp\bsp_battery_led.c)(0x6A1CF67F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/bsp_battery_led.o -MMD)
-I (..\..\bsp\bsp_battery_led.h)(0x6A1CF621)
+I (..\..\bsp\delay.h)(0x6A1D264E)
+F (..\..\bsp\bsp_battery_led.c)(0x6A1D264E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/bsp_battery_led.o -MMD)
+I (..\..\bsp\bsp_battery_led.h)(0x6A1D264E)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x69645ED3)
@@ -536,8 +537,9 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
-F (..\..\bsp\bsp_charge.c)(0x6A1CF2D2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/bsp_charge.o -MMD)
-I (..\..\bsp\bsp_charge.h)(0x6A1CF2B3)
+I (..\..\app\app_config.h)(0x6A1D43D5)
+F (..\..\bsp\bsp_charge.c)(0x6A1D264E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/bsp_charge.o -MMD)
+I (..\..\bsp\bsp_charge.h)(0x6A1D264E)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x69645ED3)
@@ -561,8 +563,9 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
-F (..\..\app\cmd_parser.c)(0x6A1D00CA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/cmd_parser.o -MMD)
-I (..\..\app\cmd_parser.h)(0x6A190104)
+I (..\..\app\app_config.h)(0x6A1D43D5)
+F (..\..\app\cmd_parser.c)(0x6A1D43DF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/cmd_parser.o -MMD)
+I (..\..\app\cmd_parser.h)(0x6A1D264E)
 I (..\..\bsp\bsp_led.h)(0x6A190D2E)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
@@ -587,15 +590,14 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
-I (..\..\bsp\bsp_pwm.h)(0x6A194F58)
-I (..\..\app\app_brightness.h)(0x6A1CD94B)
-I (..\..\bsp\bsp_adc.h)(0x6A1CE767)
-I (..\..\app\app_battery.h)(0x6A1CE9BC)
-I (..\..\bsp\bsp_charge.h)(0x6A1CF2B3)
-I (..\..\app\app_version.h)(0x6A1D000E)
-F (..\..\app\app_brightness.c)(0x6A1CD988)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/app_brightness.o -MMD)
-I (..\..\app\app_brightness.h)(0x6A1CD94B)
-I (..\..\bsp\bsp_key.h)(0x6A193FB9)
+I (..\..\app\app_brightness.h)(0x6A1D264E)
+I (..\..\app\app_battery.h)(0x6A1D43CF)
+I (..\..\bsp\bsp_charge.h)(0x6A1D264E)
+I (..\..\app\app_version.h)(0x6A1D4594)
+I (..\..\app\app_config.h)(0x6A1D43D5)
+F (..\..\app\app_brightness.c)(0x6A1D43D5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/app_brightness.o -MMD)
+I (..\..\app\app_brightness.h)(0x6A1D264E)
+I (..\..\bsp\bsp_key.h)(0x6A1D264E)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x69645ED3)
@@ -621,12 +623,15 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x69830
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
 I (..\..\bsp\bsp_pwm.h)(0x6A194F58)
 I (..\..\bsp\bsp_flash.h)(0x6A197B57)
-F (..\..\app\app_battery.c)(0x6A1CF67F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/app_battery_1.o -MMD)
-I (..\..\app\app_battery.h)(0x6A1CE9BC)
+I (..\..\app\app_battery.h)(0x6A1D43CF)
+I (..\..\app\app_config.h)(0x6A1D43D5)
+F (..\..\app\app_battery.c)(0x6A1D4594)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/GD32E23x_standard_peripheral/Include -I ../../libraries/GD32E23x_standard_peripheral/Source -I ../../app -I ../../bsp -I ../../drivers -I ../../user -I ../../libraries/CMSIS/GD/GD32E23x/Include-I./RTE/_GD32E23x-I"F:/Keil5/Keil5 MDK541/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"F:/Keil5/Keil5 MDK541/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include"-D__UVISION_VERSION="541" -DGD32E23x -D_RTE_ -DGD32E230-o ./output/app_battery_1.o -MMD)
+I (..\..\app\app_battery.h)(0x6A1D43CF)
+I (..\..\app\app_config.h)(0x6A1D43D5)
 I (..\..\bsp\bsp_adc.h)(0x6A1CE767)
-I (..\..\bsp\bsp_battery_led.h)(0x6A1CF621)
-I (..\..\bsp\bsp_charge.h)(0x6A1CF2B3)
-I (..\..\bsp\delay.h)(0x6A193D20)
+I (..\..\bsp\bsp_battery_led.h)(0x6A1D264E)
+I (..\..\bsp\bsp_charge.h)(0x6A1D264E)
+I (..\..\bsp\bsp_pwm.h)(0x6A194F58)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x698306C8)
 I (F:\Keil5\Keil5 MDK541\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm23.h)(0x664BD888)
 I (..\..\libraries\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x69645ED3)
@@ -650,3 +655,4 @@ I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6983
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x698306C8)
 I (..\..\libraries\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x698306C8)
+I (..\..\bsp\delay.h)(0x6A1D264E)

@@ -1,19 +1,14 @@
 #include "bsp_charge.h"
 #include "gd32e23x.h"
+#include "app_config.h"
 
 /*
- * PA4  = CHRG
- * PA5  = STDBY
- * PA10 = USB_DET
+ * PA4  = CHRG,  low = charging
+ * PA5  = STDBY, low = full/standby
+ * PA10 = USB_DET, only available when APP_ENABLE_UART_COMMANDS == 0
  *
- * Important:
- * PA10 is also USART0_RX in the current debug version.
- *
- * 0 = keep PA10 as UART RX, USB_DET disabled
- * 1 = use PA10 as USB_DET, UART RX will not work
+ * PA10 is USART0_RX in debug mode. Do not use PA10 as USB_DET while UART RX is enabled.
  */
-#define ENABLE_USB_DET_ON_PA10    0
-
 #define CHRG_PORT       GPIOA
 #define CHRG_PIN        GPIO_PIN_4
 
@@ -27,45 +22,31 @@ void bsp_charge_init(void)
 {
     rcu_periph_clock_enable(RCU_GPIOA);
 
-    /*
-     * CHRG / STDBY are usually open-drain outputs.
-     * Use pull-up input.
-     */
     gpio_mode_set(GPIOA, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP,
                   CHRG_PIN | STDBY_PIN);
 
-#if ENABLE_USB_DET_ON_PA10
-    /*
-     * PA10 as USB_DET input.
-     * Warning: this disables normal UART RX usage on PA10.
-     */
+#if !APP_ENABLE_UART_COMMANDS
+    /* Assume USB_DET is high when USB is connected. */
     gpio_mode_set(GPIOA, GPIO_MODE_INPUT, GPIO_PUPD_NONE, USB_DET_PIN);
 #endif
 }
 
 uint8_t bsp_charge_is_charging(void)
 {
-    return (gpio_input_bit_get(CHRG_PORT, CHRG_PIN) == RESET) ? 1 : 0;
+    return (gpio_input_bit_get(CHRG_PORT, CHRG_PIN) == RESET) ? 1U : 0U;
 }
 
 uint8_t bsp_charge_is_full(void)
 {
-    return (gpio_input_bit_get(STDBY_PORT, STDBY_PIN) == RESET) ? 1 : 0;
+    return (gpio_input_bit_get(STDBY_PORT, STDBY_PIN) == RESET) ? 1U : 0U;
 }
 
 uint8_t bsp_charge_is_usb_connected(void)
 {
-#if ENABLE_USB_DET_ON_PA10
-    /*
-     * 假设 USB_DET 插入 USB 时为高电平。
-     * 如果你实际测量相反，后面把 SET 改成 RESET。
-     */
-    return (gpio_input_bit_get(USB_DET_PORT, USB_DET_PIN) == SET) ? 1 : 0;
+#if APP_ENABLE_UART_COMMANDS
+    return 0U;
 #else
-    /*
-     * 当前调试版 PA10 保留给 UART RX。
-     */
-    return 0;
+    return (gpio_input_bit_get(USB_DET_PORT, USB_DET_PIN) == SET) ? 1U : 0U;
 #endif
 }
 
@@ -77,17 +58,17 @@ charge_status_t bsp_charge_get_status(void)
     chrg_low = bsp_charge_is_charging();
     stdby_low = bsp_charge_is_full();
 
-    if((chrg_low == 1) && (stdby_low == 0))
+    if((chrg_low == 1U) && (stdby_low == 0U))
     {
         return CHARGE_STATUS_CHARGING;
     }
 
-    if((chrg_low == 0) && (stdby_low == 1))
+    if((chrg_low == 0U) && (stdby_low == 1U))
     {
         return CHARGE_STATUS_FULL;
     }
 
-    if((chrg_low == 0) && (stdby_low == 0))
+    if((chrg_low == 0U) && (stdby_low == 0U))
     {
         return CHARGE_STATUS_NOT_CHARGING;
     }
@@ -111,4 +92,13 @@ const char *bsp_charge_get_status_string(void)
         default:
             return "Unknown";
     }
+}
+
+const char *bsp_charge_get_usb_string(void)
+{
+#if APP_ENABLE_UART_COMMANDS
+    return "Disabled, PA10 used by UART RX";
+#else
+    return bsp_charge_is_usb_connected() ? "Connected" : "Disconnected";
+#endif
 }

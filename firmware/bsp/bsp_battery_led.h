@@ -6,8 +6,7 @@
 void bsp_battery_led_init(void);
 void bsp_battery_led_all_off(void);
 void bsp_battery_led_set_count(uint8_t count);
-
-/* ??:? bit ?? 3 ? LED */
 void bsp_battery_led_set_mask(uint8_t mask);
+uint8_t bsp_battery_led_get_max_count(void);
 
 #endif

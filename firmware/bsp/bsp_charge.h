@@ -19,5 +19,6 @@ uint8_t bsp_charge_is_usb_connected(void);
 
 charge_status_t bsp_charge_get_status(void);
 const char *bsp_charge_get_status_string(void);
+const char *bsp_charge_get_usb_string(void);
 
 #endif
