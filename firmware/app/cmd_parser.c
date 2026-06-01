@@ -4,6 +4,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "app_brightness.h"
+#include "bsp_adc.h"
+#include "app_battery.h"
+#include "bsp_charge.h"
+#include "app_version.h"
 
 #define CMD_BUFFER_SIZE 32
 
@@ -69,34 +74,78 @@ void cmd_parser_process_char(char ch)
                 duty = 100;
             }
 
-            bsp_pwm_set_duty((uint8_t)duty);
-            printf("PWM duty:%d%%\r\n", duty);
+          app_brightness_set_duty((uint8_t)duty);
         }
         else if(strcmp(cmd_buffer, "status") == 0)
         {
-            printf("System Status:\r\n");
-            printf("Clock: IRC8M / SystemCoreClock\r\n");
-            printf("UART: OK\r\n");
-            printf("Command End: ;\r\n");
-            printf("Blink1: %s\r\n", led_blink_enable ? "ON" : "OFF");
-            printf("PWM Duty: %d%%\r\n", bsp_pwm_get_duty());
+    printf("System Status:\r\n");
+printf("Version : %s\r\n", APP_VERSION_STRING);
+printf("UART    : OK\r\n");
+printf("Flash   : OK\r\n");
+
+printf("Backlight:\r\n");
+printf("  Level : %d/%d\r\n",
+       app_brightness_get_level(),
+       app_brightness_get_max_level());
+printf("  Duty  : %d%%\r\n",
+       app_brightness_get_duty());
+
+printf("Battery:\r\n");
+printf("  Voltage : %dmV\r\n", app_battery_get_voltage_mv());
+printf("  Percent : %d%%\r\n", app_battery_get_percent());
+printf("  LED     : %d/3\r\n", app_battery_get_led_count());
+
+printf("Charge:\r\n");
+printf("  Status  : %s\r\n", bsp_charge_get_status_string());		
+					
         }
+				else if(strcmp(cmd_buffer, "version") == 0)
+{
+   printf("GD32 Backlight Controller %s\r\n", APP_VERSION_STRING);
+}
+else if(strcmp(cmd_buffer, "level") == 0)
+{
+    printf("Level: %d/%d duty=%d%%\r\n",
+           app_brightness_get_level(),
+           app_brightness_get_max_level(),
+           app_brightness_get_duty());
+}
+else if(strncmp(cmd_buffer, "level ", 6) == 0)
+{
+    int level = atoi(&cmd_buffer[6]);
+
+    if(level < 0)
+    {
+        level = 0;
+    }
+
+    if(level > app_brightness_get_max_level())
+    {
+        level = app_brightness_get_max_level();
+    }
+
+    app_brightness_set_level((uint8_t)level);
+}
+else if(strcmp(cmd_buffer, "factory") == 0)
+{
+    app_brightness_factory_reset();
+}
         else if(strcmp(cmd_buffer, "help") == 0)
         {
             printf("Commands:\r\n");
-            printf("led1 on;\r\n");
-            printf("led1 off;\r\n");
-            printf("led2 on;\r\n");
-            printf("led2 off;\r\n");
-            printf("blink1;\r\n");
-            printf("all off;\r\n");
-            printf("pwm 0;\r\n");
-            printf("pwm 1;\r\n");
-            printf("pwm 10;\r\n");
-            printf("pwm 50;\r\n");
-            printf("pwm 100;\r\n");
-            printf("status;\r\n");
-            printf("help;\r\n");
+printf("  help;\r\n");
+printf("  status;\r\n");
+printf("  version;\r\n");
+printf("  level;\r\n");
+printf("  level 0~12;\r\n");
+printf("  pwm 0~100;\r\n");
+printf("  factory;\r\n");
+printf("  led1 on;\r\n");
+printf("  led1 off;\r\n");
+printf("  led2 on;\r\n");
+printf("  led2 off;\r\n");
+printf("  blink1;\r\n");
+printf("  all off;\r\n");
         }
         else
         {

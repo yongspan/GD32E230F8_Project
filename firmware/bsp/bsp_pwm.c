@@ -53,7 +53,7 @@ void bsp_pwm_init(void)
 
     timer_auto_reload_shadow_enable(PWM_TIMER);
 
-    bsp_pwm_set_duty(100);
+    bsp_pwm_set_duty(0);
 
     timer_enable(PWM_TIMER);
 }

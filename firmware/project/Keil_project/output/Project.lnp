@@ -9,6 +9,8 @@
 ".\output\gd32e23x_exti.o"
 ".\output\gd32e23x_usart.o"
 ".\output\gd32e23x_timer.o"
+".\output\gd32e23x_fmc.o"
+".\output\gd32e23x_adc.o"
 ".\output\startup_gd32e23x.o"
 ".\output\bsp_led.o"
 ".\output\delay.o"
@@ -16,8 +18,13 @@
 ".\output\bsp_uart_ringbuffer.o"
 ".\output\bsp_key.o"
 ".\output\bsp_pwm.o"
+".\output\bsp_flash.o"
+".\output\bsp_adc.o"
+".\output\bsp_battery_led.o"
+".\output\bsp_charge.o"
 ".\output\cmd_parser.o"
 ".\output\app_brightness.o"
+".\output\app_battery_1.o"
 --library_type=microlib --strict --scatter ".\output\Project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
